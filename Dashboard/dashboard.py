@@ -9,7 +9,7 @@ st.set_page_config(page_title="Dashboard Tren Penyewaan Sepeda", layout="wide")
 # Load data
 @st.cache_data
 def load_data():
-    day_df = pd.read_csv('https://raw.githubusercontent.com/FatwaAlFajar/submission-main/refs/heads/main/data/day.csv')
+    day_df = pd.read_csv('https://raw.githubusercontent.com/Tasyaya/Submission-Tasya/refs/heads/main/Data/day.csv')
     return day_df
 
 # Membaca data
@@ -19,7 +19,7 @@ day_df['year'] = day_df['dteday'].dt.year
 
 # Sidebar untuk filter tahun terlebih dahulu
 with st.sidebar:
-    st.image("https://raw.githubusercontent.com/FatwaAlFajar/submission-main/main/Picture/rental%20sepeda.png", use_container_width=True)
+    st.image("https://raw.githubusercontent.com/Tasyaya/Submission-Tasya/main/picture/sepeda.jpg", use_container_width=True)
     selected_year = st.selectbox("Pilih Tahun", options=sorted(day_df['year'].unique()))
     
     # Filter data berdasarkan tahun
